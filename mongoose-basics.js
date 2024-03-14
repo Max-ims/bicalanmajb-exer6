@@ -32,4 +32,8 @@ await newStudent.save();
 let findNewStudent = await Student.find({stdnum: 12345678});
 console.log(findNewStudent)
 
-let stud = await Student.findOne({ age: 65});
+//update
+let stud = await Student.findOne({ age: 20});
+stud.fname = "Peter"
+await stud.save();
+
